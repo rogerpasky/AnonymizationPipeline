@@ -144,7 +144,7 @@ optional arguments:
 
 Example:
 ```bash
-python pipeline.py -i example_input/plain_text/frases.txt -m models/ca_anonimization_core_lg models/xx_ent_wiki_sm -f plain -a intelligent -o output/output_test.jsonl -t spacy spacy
+python pipeline.py -i example_input/plain_text/frases.txt -m models/es_anonimization_core_lg models/xx_ent_wiki_sm -f plain -a intelligent -o output/output_test.jsonl -t spacy spacy
 ```
 
 The details about the functioning of each argument and the formats of the input and output files are detailed below. 
@@ -248,11 +248,36 @@ Any Spacy model trained for the NER task can be used for the sensitive data dete
 
 Models available for download and install at:
 
-- https://huggingface.co/PlanTL-GOB-ES/ca_anonimization_core_lg
+- https://huggingface.co/PlanTL-GOB-ES/es_anonimization_core_lg
 
 - https://huggingface.co/spacy/xx_ent_wiki_sm
 
 Clone them under the models/ directory or reference them if installing on envs via pip.
+
+### Model installation instructions
+From the repository root execute:
+
+```bash
+% pipenv install https://huggingface.co/PlanTL-GOB-ES/es_anonimization_core_lg/resolve/main/es_anonimization_core_lg-any-py3-none-any.whl
+
+% ln -s $(find $(pipenv --venv) -type d -name "es_anonimization_core_lg")/es_anonimization_core_lg* models/es_anonimization_core_lg
+
+
+% pipenv install https://huggingface.co/spacy/xx_ent_wiki_sm/resolve/main/xx_ent_wiki_sm-any-py3-none-any.whl
+
+% ln -s $(find $(pipenv --venv) -type d -name "xx_ent_wiki_sm")/xx_ent_wiki_sm* models/xx_ent_wiki_sm
+
+
+# pipenv install https://huggingface.co/PlanTL-GOB-ES/ca_anonimization_core_lg/resolve/main/ca_anonimization_core_lg-any-py3-none-any.whl
+# ln -s $(find $(pipenv --venv) -type d -name "ca_anonimization_core_lg")/ca_anonimization_core_lg-1.0.0 models/ca_anonimization_core_lg
+
+
+# python -m spacy download xx_ent_wiki_sm
+# wget https://huggingface.co/PlanTL-GOB-ES/ca_anonimization_core_lg/resolve/main/ca_anonimization_core_lg-any-py3-none-any.whl
+# pipenv install ca_anonimization_core_lg-any-py3-none-any.whl
+# find $(pipenv --venv) -type d -name "ca_anonimization_core_lg"
+# ln -s $(find $(pipenv --venv) -type d -name "ca_anonimization_core_lg") models/ca_anonimization_core_lg
+```
 
 ## Customizing Regex
 If specific regex expressions or patterns are to be recognized, one can replace the regex definition of the regex model providing a new regex definition file. 
