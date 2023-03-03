@@ -255,15 +255,11 @@ Models available for download and install at:
 Clone them under the models/ directory or reference them if installing on envs via pip.
 
 ### Model installation instructions
-From the repository root execute:
+From the repository root execute following commands after `pipenv install`:
 
 ```bash
-% pipenv install https://huggingface.co/PlanTL-GOB-ES/es_anonimization_core_lg/resolve/main/es_anonimization_core_lg-any-py3-none-any.whl
-
 % ln -s $(find $(pipenv --venv) -type d -name "es_anonimization_core_lg")/es_anonimization_core_lg* models/es_anonimization_core_lg
 
-
-% pipenv install https://huggingface.co/spacy/xx_ent_wiki_sm/resolve/main/xx_ent_wiki_sm-any-py3-none-any.whl
 
 % ln -s $(find $(pipenv --venv) -type d -name "xx_ent_wiki_sm")/xx_ent_wiki_sm* models/xx_ent_wiki_sm
 ```
