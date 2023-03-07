@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-i", "example_input/plain_text/frases.txt", 
+                "-m", "models/es_anonimization_core_lg", "models/xx_ent_wiki_sm",
+                "-f", "plain",
+                "-a", "intelligent",
+                "-o", "output/output_test.jsonl",
+                "-t", "spacy", "spacy"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
