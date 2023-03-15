@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "Py:Demo",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -13,9 +13,23 @@
                 "-i", "example_input/plain_text/frases.txt", 
                 "-m", "models/es_anonimization_core_lg", "models/xx_ent_wiki_sm",
                 "-f", "plain",
-                "-a", "intelligent",
+                "-a", "label",
                 "-o", "output/output_test.jsonl",
                 "-t", "spacy", "spacy"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Py:0Demo",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-i", "example_input/plain_text/frases.txt", 
+                "-f", "plain",
+                "-a", "label",
+                "-o", "output/output_test.jsonl"
             ],
             "console": "integratedTerminal",
             "justMyCode": true
