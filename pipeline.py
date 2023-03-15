@@ -21,9 +21,9 @@ def main():
     parser.add_argument("-i", "--input", type=str, \
         help="File containing the original text with a context per line.", required=True)
     parser.add_argument("-m", "--models", type=str, nargs="*", \
-        help="List of paths to the NER models", default=["es_anonimization_core_lg", "xx_ent_wiki_sm"])
-    parser.add_argument("-t", "--type_of_models", nargs="*", choices=["spacy", "huggingface"], default=["spacy", "spacy"], \
-        help="List of the type of NER models (must coincide with list of paths length)")
+        help="List of paths to the NER models", default=[])#, default=["es_anonimization_core_lg", "xx_ent_wiki_sm"])
+    parser.add_argument("-t", "--type_of_models", nargs="*", choices=["spacy", "huggingface"], \
+        help="List of the type of NER models (must coincide with list of paths length)", default=[])#, default=["spacy", "spacy"])
     parser.add_argument("-f", "--format", choices=["plain", "jsonl", "doccano"] , default="plain", \
         help="Format of the input file")
     parser.add_argument("-a", "--anonym_method", choices=["label", "random", "intelligent", "none"], default="none", \
