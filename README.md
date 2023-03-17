@@ -95,6 +95,9 @@ Check the python version, if you have python installed (python 3.7 onwards is en
 ```bash
 python --version
 ```
+
+In Mac there may raise some problems on Python internals related to standard library `lzma` which can be solved through `pyenv` executing first `brew install xz` and later `pyenv install 3.10.6` followed by `pyenv global 3.10.6`.
+
 Prepare an isolated virtual environment:
 ```bash
 python -m venv venv
