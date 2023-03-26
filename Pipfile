@@ -50,6 +50,8 @@ es-anonimization-core-lg = {file = "https://huggingface.co/PlanTL-GOB-ES/es_anon
 xx-ent-wiki-sm = {file = "https://huggingface.co/spacy/xx_ent_wiki_sm/resolve/main/xx_ent_wiki_sm-any-py3-none-any.whl"}
 torch = "==1.13.1"
 datasets = "==2.10.1"
+scikit-learn = "*"
+evaluate = "*"
 
 [dev-packages]
 ipykernel = "*"
